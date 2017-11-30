@@ -3,30 +3,26 @@ module Main exposing (..)
 import Html exposing (Html, text, div, h1, img)
 import Html.Attributes exposing (src)
 
+import Msg exposing (..)
+import Model exposing (..)
 import View exposing (appView)
-
----- MODEL ----
-
-
-type alias Model =
-    {}
-
-
-init : ( Model, Cmd Msg )
-init =
-    ( {}, Cmd.none )
-
-
 
 ---- UPDATE ----
 
 
-type Msg
-    = NoOp
-
-
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
+  case msg of
+    Search searchString ->
+    ( { model | search = searchString }, Cmd.none )
+
+    FetchFlats (Ok flats) ->
+    ( { model | flats = flats }, Cmd.none )
+
+    FetchFlats (Err _) ->
+    ( model, Cmd.none )
+
+    NoOp ->
     ( model, Cmd.none )
 
 
@@ -35,7 +31,7 @@ update msg model =
 
 
 view : Model -> Html Msg
-view model = appView
+view model = appView model
 
 
 
