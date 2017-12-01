@@ -1,7 +1,10 @@
 import './main.css';
 import { Main } from './Main.elm';
 import registerServiceWorker from './registerServiceWorker';
+import initializeMap from './initializeMap';
 
-Main.embed(document.getElementById('root'));
+const app = Main.embed(document.getElementById('root'));
+
+initializeMap(app)
 
 registerServiceWorker();

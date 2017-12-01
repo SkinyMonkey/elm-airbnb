@@ -7,6 +7,9 @@ import Msg exposing (..)
 import Model exposing (..)
 import View exposing (appView)
 
+import Map
+import Port
+
 ---- UPDATE ----
 
 

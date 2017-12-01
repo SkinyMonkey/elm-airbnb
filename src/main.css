@@ -23,8 +23,8 @@ img {
 }
 
 #map {
-  background-color: green;
   flex-grow: 1;
+  background-color: green;
   height: 100vh;
   top: 0;
   position: sticky;

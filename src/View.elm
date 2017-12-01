@@ -10,5 +10,5 @@ import Map exposing (map)
 appView model = div [ id "app" ]
         [
           div [ id "app-left" ] [search, flats model.search model.flats],
-          map
+          div [ id "map" ]      [map]
         ]
