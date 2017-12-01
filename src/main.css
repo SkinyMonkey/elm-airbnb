@@ -41,3 +41,17 @@ img {
   flex-basis: calc(50% - 20px);
   margin: 10px;
 }
+
+.marker {
+  background-color: white;
+  width: 30px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.marker-selected {
+  background-color: yellow;
+  width: 30px;
+  font-size: 16px;
+  text-align: center;
+}
