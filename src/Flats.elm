@@ -1,4 +1,4 @@
-module Flats exposing (flats, fetchFlats)
+module Flats exposing (flats, fetchFlats, flatByName)
 
 import Http
 import Html exposing (text, div, h1)

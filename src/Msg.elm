@@ -7,3 +7,4 @@ type Msg
     = NoOp
     | Search String
     | FetchFlats (Result Http.Error (List Flat))
+--    | SelectFlat Flat

@@ -14,14 +14,8 @@ app.ports.initializeMap.subscribe(function (pos) {
     };
     var gmap = new google.maps.Map(mapDiv, mapOptions);
 
-    // Marker
-    var marker = new google.maps.Marker({
-      position: myLatlng,
-      title: "Airbnb map"
-    });
+    window.gmap = gmap;
 
-    marker.setMap(gmap);
-  
     // ugly trick to avoid the position = relative
     setTimeout(() => {
       document.getElementById('map').style.position = 'sticky'
@@ -32,7 +26,6 @@ app.ports.initializeMap.subscribe(function (pos) {
       console.log("received", pos);
       var myLatlng = new google.maps.LatLng(pos);
       gmap.setCenter(myLatlng);
-      marker.setPosition(myLatlng)
     });
 
 
