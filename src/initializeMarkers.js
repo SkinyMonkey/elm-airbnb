@@ -20,8 +20,6 @@ app.ports.initializeMarkers.subscribe(function (flats) {
 
     marker.name = flat.name;
 
-    marker.setMap(window.gmap);
-
     // TODO : on marker click, select right flat
     
     return (marker);
