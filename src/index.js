@@ -9,9 +9,11 @@ import setCenter from './setCenter';
 
 const app = Main.embed(document.getElementById('root'));
 
+/*
 initializeMap(app)
 initializeMarkers(app)
 updateMarkers(app)
 setCenter(app)
+*/
 
 registerServiceWorker();
