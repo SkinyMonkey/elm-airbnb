@@ -1,5 +1,7 @@
 module App.Types exposing (..)
 
+import Http
+
 import Flat.Types exposing (Flat)
 
 --  map: Map,
@@ -14,4 +16,4 @@ type Msg
     = NoOp
     | Search String
     | SelectFlat Flat
---    | FetchFlats (Result Http.Error (List Flat))
+    | FetchFlats (Result Http.Error (List Flat))
