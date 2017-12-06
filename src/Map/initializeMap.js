@@ -4,7 +4,7 @@ app.ports.initializeMap.subscribe(function (pos) {
   console.log("Initialize Map");
 
   var mapDiv = document.getElementById('map');
-  console.log(pos);
+
   if (mapDiv) {
     // Map
     var myLatlng = new google.maps.LatLng(pos);
